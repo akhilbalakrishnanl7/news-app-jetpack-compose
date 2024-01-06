@@ -1,5 +1,6 @@
 package com.example.newsapp.presentation.common
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -31,6 +32,7 @@ import com.example.newsapp.presentation.Dimens.MediumPadding1
 import com.example.newsapp.ui.theme.NewsAppTheme
 
 //Reusable custom modifier
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 fun Modifier.shimmerEffect() = composed {
     val transition = rememberInfiniteTransition()
     val alpha = transition.animateFloat(
