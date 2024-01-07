@@ -10,7 +10,7 @@ plugins {
 }
 val properties = Properties()
 properties.load(project.rootProject.file("local.properties").inputStream())
-val apiKey = properties.getProperty("API_KEY")
+val apiKey: String = properties.getProperty("API_KEY")
 
 android {
     namespace = "com.example.newsapp"
@@ -97,7 +97,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //Coil
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     //DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
